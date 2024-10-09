@@ -25,14 +25,14 @@ jobs:
 
       # Step 4: Build the Docker image
       - name: Build Docker image
-        run: docker build -t ghcr.io/itsiospaschalis/pliades_repo:0.0.1 .
+        run: docker build -t ghcr.io/itsiospaschalis/pliades_repo
 
       # Step 5: Push the Docker image to GitHub Container Registry
       - name: Push Docker image
-        run: docker push ghcr.io/itsiospaschalis/pliades_repo:0.0.1
+        run: docker push ghcr.io/itsiospaschalis/pliades_repo
 
       # Step 6 (Optional): Tag image as latest and push
       - name: Tag and Push Latest
         run: |
-          docker tag ghcr.io/itsiospaschalis/pliades_repo:0.0.1 ghcr.io/itsiospaschalis/pliades_repo:latest
+          docker tag ghcr.io/itsiospaschalis/pliades_repo ghcr.io/itsiospaschalis/pliades_repo:latest
           docker push ghcr.io/itsiospaschalis/pliades_repo:latest
